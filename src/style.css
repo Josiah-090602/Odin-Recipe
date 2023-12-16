@@ -6,5 +6,16 @@
  margin: 0;
  font-family: Poppins;
 }
+:root{
+    --primary-color: #00092C;
+    --secondary-color:#B20600;
+    --tertiary-color: #FF5F00;
+    --white-color:#EEEEEE;
+}
 
+
+.main-con{
+    height: 100vh;
+    background-color: var(--primary-color);
+}
 
