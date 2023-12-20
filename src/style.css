@@ -97,6 +97,17 @@
     height: 100%;
     text-align: justify;
 }
+#origin, #category{
+    height: auto;
+    font-size: 1.3rem;
+}
+
+.text-wrapper h4{
+    color: var(--tertiary-color) !important;
+    height: auto;
+    border-bottom: 1px solid var(--tertiary-color);
+
+}
 
 
 
