@@ -34,7 +34,7 @@
 
 .content-wrapper{
     border: 1px solid white;
-    height: 100%;
+    height: 100% !important;
     padding: 10px;
     width: 100%;
     gap: 10px;
@@ -43,6 +43,9 @@
 .menu-section{
     border: 1px solid white;
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .content-section{
     border: 1px solid white;
@@ -52,7 +55,8 @@
     height: 100%;
     justify-content: space-evenly;
 }
-.menu-link{
+.menu-btn{
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,10 +65,10 @@
     border: 1px solid rgb(245, 138, 66, 0.6);
     color: var(--tertiary-color);
     text-decoration: none;
-    height: 190px;
+    height: 100px;
     cursor: pointer;
 }
-.menu-link:hover{
+.menu-btn:hover{
     background-color: rgb(245, 138, 66, 0.2);
     transition: 0.3s ease-out !important;
     text-decoration: none;
@@ -78,6 +82,21 @@
     border: rgb(245, 138, 66);
 }
 
+.menu-btn:active{
+    background-color: rgb(245, 138, 66, 0.2);
+    transition: 0.3s ease-out !important;
+    text-decoration: none;
+    color: white !important;
+    border: 1px solid rgb(245, 138, 66, 0.6);
+}
+
+.text-wrapper{
+    color: var(--white-color);
+    padding: 10px !important;
+    border: 1px solid white;
+    height: 100%;
+    text-align: justify;
+}
 
 
 
