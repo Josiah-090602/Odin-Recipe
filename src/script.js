@@ -1,6 +1,6 @@
 const header = document.getElementById('menu-section')
 const menuLink = header.getElementsByClassName('menu-btn')
-const recipeContent = {
+ const recipeContent = {
     recipe1:[
         "/img/Bulaklak.jpg","Chicharon Bulaklak is believed to originate from the province of Ilocos, which is commonly called “silit”. It is a pork ruffle that serves as a wall to hold the small intestine in place. Despite its name, it is actually not cooked using flowers; rather, it is named “bulaklak” (flower) because of its flower-like appearance after it is cooked. Chicharon bulaklak is a favorite of many Filipinos, and it is often consumed with alcoholic drinks and is best eaten when dipped in spicy vinegar.It is a popular dish that is deep-fried until golden brown and served warm and extra crispy.","Appetizer","Ruffle fat, Whole peppercorn, Dried bay leaves, Sea salt, Canola oil, Water"],
 
@@ -18,6 +18,7 @@ const recipeContent = {
 
 }
 
+
 //SetActive
 for (let i = 0; i < menuLink.length; i++){
     menuLink[i].addEventListener("click", function() {
@@ -25,13 +26,14 @@ for (let i = 0; i < menuLink.length; i++){
         current[0].className = current[0].className.replace
         ("active","")
         this.className += " active"
-        changeContent()
-        console.log (selected)
+        changeContent(i)
+        
+        //console.log (selection)
     })    
 }
 
 //ChangeContentFunction
-function changeContent (){
+function changeContent(index){
     const recipeTitle = document.getElementById('recipe-title')
     const menus = document.getElementsByClassName('menu-btn')
     const contentOrigin = document.getElementById('origin')
@@ -39,32 +41,40 @@ function changeContent (){
     const contentImg = document.getElementById('content-image')
     const contentIngred = document.getElementById('ingredients')
     
-
-    if (menus[1].classList.contains('active')){
-        recipeTitle.innerHTML = "SINIGANG"
-        contentImg.src = recipeContent.recipe2[0]
-        contentOrigin.innerHTML = recipeContent.recipe2[1]
-        contentCategory.innerHTML = recipeContent.recipe2[2]
-        contentIngred.innerHTML = recipeContent.recipe2[3]
-    }else if (menus[2].classList.contains('active')){
-        recipeTitle.innerHTML = "HALO-HALO"
-        contentImg.src = recipeContent.recipe3[0]
-        contentOrigin.innerHTML = recipeContent.recipe3[1]
-        contentCategory.innerHTML = recipeContent.recipe3[2]
-        contentIngred.innerHTML = recipeContent.recipe3[3]
-        guidelinesLink.href = recipeContent.recipe3[4]
-    }else if (menus[3].classList.contains('active')){
-        recipeTitle.innerHTML = "MELONADE"
-        contentImg.src = recipeContent.recipe4[0]
-        contentOrigin.innerHTML = recipeContent.recipe4[1]
-        contentCategory.innerHTML = recipeContent.recipe4[2]
-        contentIngred.innerHTML = recipeContent.recipe4[3]
-    }else{
-        recipeTitle.innerHTML = "CHICHARONG BULAKLAK"
-        contentImg.src =  recipeContent.recipe1[0]
-        contentOrigin.innerHTML = recipeContent.recipe1[1]
-        contentCategory.innerHTML = recipeContent.recipe1[2]
-        contentIngred.innerHTML = recipeContent.recipe1[3]
+    switch (index){
+        case 1:
+            recipeTitle.innerHTML = "SINIGANG"
+            localStorage.setItem("selected", "SINIGANG")
+            contentImg.src = recipeContent.recipe2[0]
+            contentOrigin.innerHTML = recipeContent.recipe2[1]
+            contentCategory.innerHTML = recipeContent.recipe2[2]
+            contentIngred.innerHTML = recipeContent.recipe2[3]
+            break
+        case 2:
+            recipeTitle.innerHTML = "HALO-HALO"
+            localStorage.setItem("selected", "HALO-HALO")
+            contentImg.src = recipeContent.recipe3[0]
+            contentOrigin.innerHTML = recipeContent.recipe3[1]
+            contentCategory.innerHTML = recipeContent.recipe3[2]
+            contentIngred.innerHTML = recipeContent.recipe3[3]
+            guidelinesLink.href = recipeContent.recipe3[4]
+            break
+        case 3:
+            recipeTitle.innerHTML = "MELONADE"
+            localStorage.setItem("selected", "MELONADE")
+            contentImg.src = recipeContent.recipe4[0]
+            contentOrigin.innerHTML = recipeContent.recipe4[1]
+            contentCategory.innerHTML = recipeContent.recipe4[2]
+            contentIngred.innerHTML = recipeContent.recipe4[3]
+            break
+        default:
+            recipeTitle.innerHTML = "CHICHARONG BULAKLAK"
+            localStorage.setItem("selected", "CHICHARONG BULAKLAK")
+            contentImg.src =  recipeContent.recipe1[0]
+            contentOrigin.innerHTML = recipeContent.recipe1[1]
+            contentCategory.innerHTML = recipeContent.recipe1[2]
+            contentIngred.innerHTML = recipeContent.recipe1[3]
+            break
     }
 }
 
@@ -73,9 +83,8 @@ const guidelinesLink = document.getElementById("guidelines")
 
 guidelinesLink.addEventListener("click", function(){
     guidelinesLink.href = "/src/components/FullGuidelines.html"
-    guidelinesContent()
-    console.log (selected)
     })
+
 
     // function guidelinesContent(){
     //     const guidelinesTitle = document.getElementById("inner-recipe-title")
@@ -88,18 +97,7 @@ guidelinesLink.addEventListener("click", function(){
     // }
 
 
-let selected = function(){
-    const selection = ['bulaklak','sinigang','halo-halo','melonade']
-    if (menus[1].classList.contains('active')){
-        return selection[1]
-    }else if (menus[2].classList.contains('active')){
-        return selection[2]
-    }else if (menus[3].classList.contains('active')){
-        return selection[3]
-    }else {
-        return selection[0]
-    }
-}
+
 
 
 

@@ -114,6 +114,10 @@ body{
     font-size: 1rem;
 }
 
+.full-recipe-con{
+    
+}
+
 .text-wrapper h2{
     font-weight: 600 !important;
     color: var(--primary-color);
@@ -163,6 +167,8 @@ body{
 .recipe-overview h3{
     color: var(--white-color);
 }
+
+
 
 
 
