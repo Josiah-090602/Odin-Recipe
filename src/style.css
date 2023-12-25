@@ -120,7 +120,7 @@ body{
     color: var(--primary-color);
 }
 
-.text-wrapper h4{
+.text-wrapper h4, #procedures h3{
     color: var(--tertiary-color) !important;
     height: auto;
     border-bottom: 1px solid var(--tertiary-color);
