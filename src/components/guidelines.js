@@ -8,7 +8,10 @@ const sugInd = document.getElementById('sugInd')
 const fibInd = document.getElementById('fibInd')
 
 const cookingItems = [
-    ["Arrange the ruffle fat, whole peppercorn, 2 tablespoons salt, and bay leaves in a cooking pot. Pour-in water. Let boil. Cover and then simmer for 1 hour.","Turn the heat off. Remove the boiled ruffle fat from the pot and then let the water drip-off.","Rub the remaining salt all over the ruffled fat. Set aside.","Meanwhile, heat the cooking oil in a deep fryer or a deep cooking pot.", "When the oil gets hot, slowly add-in the ruffled fat. Deep fry in low to medium heat until the texture becomes crisp and the color turns medium brown.", "Remove from the deep fryer or cooking pot. Arrange in a plate lined with paper towels to absorb the oil.", "Serve with spiced vinegar.", "Share and enjoy!"], []
+    ["Arrange the ruffle fat, whole peppercorn, 2 tablespoons salt, and bay leaves in a cooking pot. Pour-in water. Let boil. Cover and then simmer for 1 hour.","Turn the heat off. Remove the boiled ruffle fat from the pot and then let the water drip-off.","Rub the remaining salt all over the ruffled fat. Set aside.","Meanwhile, heat the cooking oil in a deep fryer or a deep cooking pot.", "When the oil gets hot, slowly add-in the ruffled fat. Deep fry in low to medium heat until the texture becomes crisp and the color turns medium brown.", "Remove from the deep fryer or cooking pot. Arrange in a plate lined with paper towels to absorb the oil.", "Serve with spiced vinegar.", "Share and enjoy!"],
+    ["Rinse pork ribs and drain well.", "In a pot over medium heat, combine pork and enough water to cover. Bring to a boil, skimming scum that accumulates on top.", "Once broth clears, add tomatoes, onion, and fish sauce. Lower heat and simmer for about 1 to 1 ½ hours or until meat is tender, adding more water as necessary to maintain about 8 cups", "Add gabi and cook for about 4 to 6 minutes or until tender.", "Add chili peppers and radish. Continue to simmer for about 2 to 3 minutes.", "Add long beans. Continue to cook for about 2 minutes.", "Add eggplant and okra and cook for another 1 to 2 minutes.", "If using packaged tamarind base, add to the pot and stir until completely dissolved.", "Season with salt and pepper to taste.","Add bok choy and continue to cook for about 1 minute. Serve hot."],
+    ["Prepare the gulaman according to package directions. Use less water than called for to yield a firmer texture.", "Prepare the ingredients from scratch or use bottled halo-halo ingredients.", "In a tall glass, add about a teaspoon each of desired add-ins to about ⅓ full. ", "Pack the glass with shaved ice.", "Drizzle evaporated milk over the ice.", "Top the ice with leche flan and scoop of ice cream.", "Garnish with strips of macapuno and sprinkle with pinipig, if desired", "Serve immediately."], 
+    ["Cut cantaloupe in half crosswise and with a spoon, scrape off seeds and inner pulp.","In a bowl, place seeds and pulp with one cup of the water, and mash with the back of a spoon to extract flavor. Using a colander, strain juice and discard seeds.","Hold the cantaloupe half firmly and shred flesh using a fruit shredder or the tines of a fork into thin strands.","In a pitcher, combine shredded melon, extracted juice from seeds, simple syrup, and the remaining 3 cups of water. Stir well and chill in the refrigerator until ready to serve"]
 ]
 
 switch (localStorage.getItem("selected")){
@@ -28,9 +31,9 @@ switch (localStorage.getItem("selected")){
         textInd[4].innerHTML = "0.7 / 25g"
 
         //create guideline list item
-        for (let i = 0; i < cookingItems[0].length; i++){
+        for (let i = 0; i < cookingItems[1].length; i++){
             const item = document.createElement("li")
-            const itemContent = document.createTextNode(cookingItems[0][i])
+            const itemContent = document.createTextNode(cookingItems[1][i])
 
             item.appendChild(itemContent)
 
@@ -53,9 +56,9 @@ switch (localStorage.getItem("selected")){
         textInd[4].innerHTML = "0.9 / 25g"
 
         //create guideline list item
-        for (let i = 0; i < cookingItems[0].length; i++){
+        for (let i = 0; i < cookingItems[2].length; i++){
             const item = document.createElement("li")
-            const itemContent = document.createTextNode(cookingItems[0][i])
+            const itemContent = document.createTextNode(cookingItems[2][i])
 
             item.appendChild(itemContent)
 
@@ -78,9 +81,9 @@ switch (localStorage.getItem("selected")){
         textInd[4].innerHTML = "2.1 / 25g"
 
         //create guideline list item
-        for (let i = 0; i < cookingItems[0].length; i++){
+        for (let i = 0; i < cookingItems[3].length; i++){
             const item = document.createElement("li")
-            const itemContent = document.createTextNode(cookingItems[0][i])
+            const itemContent = document.createTextNode(cookingItems[3][i])
 
             item.appendChild(itemContent)
 
