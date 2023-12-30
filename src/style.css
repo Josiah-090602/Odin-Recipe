@@ -239,6 +239,11 @@ body{
     letter-spacing: 2px;
 }
 
+#guidelineList li{
+     margin: 25px;
+     font-size: 1.2rem;
+}
+
 
 
 
